@@ -9,46 +9,82 @@
         .sb-green { background-color: #006241; }
         .sb-text { color: #006241; }
         .oat-milk { background-color: #f2f0eb; }
+        .card-hover:hover { transform: translateY(-5px); transition: 0.3s; }
     </style>
 </head>
-<body class="oat-milk font-sans">
-    <nav class="bg-white p-4 shadow-md flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center gap-4">
-            <div class="w-10 h-10 sb-green rounded-full flex items-center justify-center text-white font-bold">SB</div>
-            <span class="font-bold text-xl tracking-tight">STARBUCKS</span>
+<body class="oat-milk font-sans pb-20">
+    <nav class="bg-white p-4 shadow-sm flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 sb-green rounded-full flex items-center justify-center text-white text-xs font-bold">SB</div>
+            <span class="font-black text-lg tracking-tighter">STARBUCKS</span>
         </div>
-        <button class="bg-black text-white px-6 py-2 rounded-full font-bold text-sm">Join Now</button>
+        <div class="hidden md:flex gap-6 font-bold text-sm">
+            <a href="#" class="hover:sb-text">MENU</a>
+            <a href="#" class="hover:sb-text">REWARDS</a>
+            <a href="#" class="hover:sb-text">GIFT CARDS</a>
+        </div>
+        <button class="bg-black text-white px-5 py-2 rounded-full font-bold text-xs">SIGN IN</button>
     </nav>
 
-    <section class="p-6 md:p-12">
-        <div class="sb-green rounded-3xl p-8 md:p-16 text-white flex flex-col md:flex-row items-center gap-8">
-            <div class="flex-1">
-                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">Good Morning, Coffee Lover.</h1>
-                <p class="text-lg opacity-90 mb-8 text-balance">Your Caramel Macchiato is 4 minutes away. Freshly crafted, just the way you like it.</p>
-                <button class="bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition">Order Now</button>
+    <section class="p-4">
+        <div class="sb-green rounded-[2rem] p-8 text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <span class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">New Release</span>
+                <h1 class="text-4xl font-black mt-4 mb-2">Lavender Oat Latte</h1>
+                <p class="text-sm opacity-80 mb-6 max-w-[200px]">Spring in a cup. Calm, creamy, and perfectly balanced.</p>
+                <button onclick="alert('Order received! Your Lavender Oat Latte is being crafted.')" class="bg-white text-black px-6 py-3 rounded-full font-bold text-sm shadow-xl">Order Now</button>
             </div>
-            <div class="flex-1 text-center">
-                <span class="text-8xl">☕</span>
+            <div class="absolute -right-4 -bottom-4 text-9xl opacity-20">🪻</div>
+        </div>
+    </section>
+
+    <section class="px-4 py-6">
+        <h2 class="text-xl font-black mb-4 px-2">Spring Favorites</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-3xl shadow-sm card-hover">
+                <div class="bg-orange-100 h-32 rounded-2xl mb-3 flex items-center justify-center text-4xl">☕</div>
+                <h3 class="font-bold text-sm">Brown Sugar Shaken</h3>
+                <p class="text-[10px] opacity-60 mb-3">Espresso, oatmilk, and ice.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-sm">₱215</span>
+                    <button onclick="alert('Added to bag!')" class="sb-green text-white w-8 h-8 rounded-full font-bold">+</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-3xl shadow-sm card-hover">
+                <div class="bg-pink-100 h-32 rounded-2xl mb-3 flex items-center justify-center text-4xl">🍓</div>
+                <h3 class="font-bold text-sm">Strawberry Açai</h3>
+                <p class="text-[10px] opacity-60 mb-3">With lemonade and fruit.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-sm">₱195</span>
+                    <button onclick="alert('Added to bag!')" class="sb-green text-white w-8 h-8 rounded-full font-bold">+</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="px-6 py-8">
-        <div class="bg-[#d4e9e2] rounded-3xl p-8 border border-[#006241]/10">
-            <h2 class="text-2xl font-bold sb-text mb-2">Starbucks® Rewards</h2>
-            <p class="mb-6">You're 15 Stars away from a free drink!</p>
-            <div class="w-full bg-white rounded-full h-4 mb-4">
-                <div class="sb-green h-4 rounded-full" style="width: 85%"></div>
+    <section class="px-4 py-4">
+        <div class="bg-white p-6 rounded-[2rem] border-2 border-dashed border-[#006241]/20">
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <p class="text-[10px] font-bold sb-text tracking-widest uppercase">Star Balance</p>
+                    <h2 class="text-3xl font-black">135</h2>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] opacity-50 font-bold uppercase">Next Reward</p>
+                    <p class="text-xs font-bold">Free Drink (150 ★)</p>
+                </div>
             </div>
-            <p class="text-xs font-bold uppercase tracking-widest opacity-60">Gold Status Tier</p>
+            <div class="w-full bg-gray-100 rounded-full h-2">
+                <div class="sb-green h-2 rounded-full" style="width: 85%"></div>
+            </div>
         </div>
     </section>
 
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t p-4 flex justify-around md:hidden">
-        <button class="flex flex-col items-center gap-1 text-xs font-bold sb-text"><span>🏠</span>Home</button>
-        <button class="flex flex-col items-center gap-1 text-xs font-bold opacity-40"><span>☕</span>Menu</button>
-        <button class="flex flex-col items-center gap-1 text-xs font-bold opacity-40"><span>⭐</span>Rewards</button>
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black/90 backdrop-blur-md text-white px-8 py-4 rounded-full flex gap-12 shadow-2xl z-50">
+        <button class="text-xl">🏠</button>
+        <button class="text-xl opacity-40" onclick="alert('Menu coming soon!')">📋</button>
+        <button class="text-xl opacity-40">⭐</button>
+        <button class="text-xl opacity-40">📍</button>
     </div>
 </body>
 </html>
-<button onclick="alert('☕ Brewing! Your order will be ready in 4 minutes.')" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition">Order Now</button>
