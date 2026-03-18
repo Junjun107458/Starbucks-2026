@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks 2026 | Reimagined</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sb-green { background-color: #006241; }
+        .sb-text { color: #006241; }
+        .oat-milk { background-color: #f2f0eb; }
+    </style>
+</head>
+<body class="oat-milk font-sans">
+    <nav class="bg-white p-4 shadow-md flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 sb-green rounded-full flex items-center justify-center text-white font-bold">SB</div>
+            <span class="font-bold text-xl tracking-tight">STARBUCKS</span>
+        </div>
+        <button class="bg-black text-white px-6 py-2 rounded-full font-bold text-sm">Join Now</button>
+    </nav>
+
+    <section class="p-6 md:p-12">
+        <div class="sb-green rounded-3xl p-8 md:p-16 text-white flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">Good Morning, Coffee Lover.</h1>
+                <p class="text-lg opacity-90 mb-8 text-balance">Your Caramel Macchiato is 4 minutes away. Freshly crafted, just the way you like it.</p>
+                <button class="bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition">Order Now</button>
+            </div>
+            <div class="flex-1 text-center">
+                <span class="text-8xl">☕</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-8">
+        <div class="bg-[#d4e9e2] rounded-3xl p-8 border border-[#006241]/10">
+            <h2 class="text-2xl font-bold sb-text mb-2">Starbucks® Rewards</h2>
+            <p class="mb-6">You're 15 Stars away from a free drink!</p>
+            <div class="w-full bg-white rounded-full h-4 mb-4">
+                <div class="sb-green h-4 rounded-full" style="width: 85%"></div>
+            </div>
+            <p class="text-xs font-bold uppercase tracking-widest opacity-60">Gold Status Tier</p>
+        </div>
+    </section>
+
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t p-4 flex justify-around md:hidden">
+        <button class="flex flex-col items-center gap-1 text-xs font-bold sb-text"><span>🏠</span>Home</button>
+        <button class="flex flex-col items-center gap-1 text-xs font-bold opacity-40"><span>☕</span>Menu</button>
+        <button class="flex flex-col items-center gap-1 text-xs font-bold opacity-40"><span>⭐</span>Rewards</button>
+    </div>
+</body>
+</html>
